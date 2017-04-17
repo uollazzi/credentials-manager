@@ -57,6 +57,6 @@ module.exports = ((name) => {
 
     DB.save();
 
-    msg.success(name, "updated.");
+    msg.success(name + " updated.");
   });
 });

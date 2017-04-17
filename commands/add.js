@@ -41,7 +41,7 @@ module.exports = (() => {
     });
 
     if (item) {
-      msg.error(name, "already taken.");
+      msg.error(name + " already taken.");
       return;
     }
 
@@ -59,7 +59,7 @@ module.exports = (() => {
 
       DB.save();
 
-      msg.success(name, "added.");      
+      msg.success(name + " added.");      
     });
   });
 });

@@ -10,12 +10,12 @@ module.exports = ((name) => {
   });
 
   if (!item) {
-    msg.error(name, "not found.");
+    msg.error(name + " not found.");
     return;
   }
 
   _.remove(db, item);
 
   DB.save();
-  msg.success(name, "deleted.");
+  msg.success(name + " deleted.");
 });
