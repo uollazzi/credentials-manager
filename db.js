@@ -1,8 +1,8 @@
 const fs = require('fs');
+const path = require('path');
 const msg = require('./msg');
 
-const dbPath = 'data.json';
-
+const dbPath = path.join(__dirname, 'data.json');
 let db;
 
 module.exports = {
@@ -10,7 +10,7 @@ module.exports = {
     // check if data.json exists and create with an empty array
     if (!fs.existsSync(dbPath)) {
       fs.writeFileSync(dbPath, JSON.stringify([]));
-      msg.info(dbPath + " created.")
+      msg.info(dbPath + " created at " + dbPath)
     }
 
     db = JSON.parse(fs.readFileSync(dbPath));
