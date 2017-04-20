@@ -1,5 +1,5 @@
 {
-  "name": "credentials-magager",
+  "name": "credentials-manager",
   "description": "A commnad line tool to store credentials.",
   "author": {
     "name": "Matteo Valenzi",
